@@ -45,10 +45,12 @@ export default class newTodo extends React.Component {
         const inputProps = {
             title: {
                 placeholder: "Code.",
+                label: "Title:",
                 inputChange: (event) => {this.handleChange({title: event.target.value})},
             },
             description: {
                 placeholder: "Write code and write more code.",
+                label: "Description:",
                 inputChange: (event) => {this.handleChange({description: event.target.value})},
             }
         };
