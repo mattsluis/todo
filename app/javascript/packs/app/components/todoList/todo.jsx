@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import Input from '../core/input/input';
 import Button from '../core/button/button';
 
+import Style from 'assets/stylesheets/todoList/todo.scss';
+
 export default class Item extends React.Component {
     constructor(props) {
         super(props);
@@ -104,9 +106,9 @@ export default class Item extends React.Component {
                 onClick: this.props.handleDelete,
             },
         }
-
+        
         return (
-            <div className="todoGroup">
+            <div className={`${Style.todoGroup}`}>
                 {todo.editable ? <Input {...inputProps.title} /> : <h4>{this.props.todo.title}</h4>}
                 {todo.editable ? <Input {...inputProps.description} /> : <p>{this.props.todo.description}</p>}
                 {todo.editable ? <Button {...btnProps.cancel}/> : ''}

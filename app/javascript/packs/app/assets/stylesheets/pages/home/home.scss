@@ -1,7 +1,7 @@
 $bg: rgb(252, 241, 142);
-$break: rgb(198, 227, 152);
 $vert: rgb(185, 63, 39);
 $bg-header: rgb(43, 43, 43);
+$break: rgb(198, 227, 152);
 
 .home {
     background-color: $bg;
@@ -12,7 +12,7 @@ $bg-header: rgb(43, 43, 43);
     .notepadHeader {
         background-color: $bg-header;
         width: 100%;
-        height: 50px;
+        height: 75px;
     }
 
     .vert {
@@ -27,22 +27,9 @@ $bg-header: rgb(43, 43, 43);
 
     .todoList {
         list-style: none;
-        background: linear-gradient(#6496b9, #E1E9A0 3px);
+        background: linear-gradient($break, transparent 3px);
         background-size: 1px 30px;
         width: 100%;
-
-        li {
-            line-height: 30px;
-            position: relative;
-            margin-left: 10%;
-
-            .inputGroup {
-                display: flex;
-            }
-            .todoGroup {
-                display: flex;
-            }
-        }
     }
 }
 

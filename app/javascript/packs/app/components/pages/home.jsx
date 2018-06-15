@@ -5,6 +5,8 @@ import List from '../todoList/list';
 
 import Api from 'middleware/api';
 
+import Style from '/assets/stylesheets/pages/home/home.scss';
+
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -63,10 +65,12 @@ export default class Home extends React.Component {
         }
 
         return (
-            <div className="home">
-                <div className="notepadHeader"></div>
-                <div className="vert"></div>
-                <ul className="todoList">
+            <div className={Style.home}>
+                <div className={Style.notepadHeader}></div>
+                <div className={Style.vert}></div>
+                <ul className={Style.todoList}>
+                    <NewTodo handleSubmit={this.onSubmit} />
+                    <NewTodo handleSubmit={this.onSubmit} />
                     <NewTodo handleSubmit={this.onSubmit} />
                     <List {...listProps} />
                 </ul>

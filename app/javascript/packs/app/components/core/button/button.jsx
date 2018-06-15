@@ -12,28 +12,34 @@ export default class Button extends Component {
         this.props.onClick && this.props.onClick('Button');
     }
 
+    generateSubmit() {
+        return(
+            <input
+                type={this.props.type}
+                value={this.props.buttonText}
+                className={`${Style.btn} ${this.props.classNames}`}
+                disabled={this.props.disabled || false}
+            />
+        )
+    }
+
+    generateButton() {
+        return (
+            <button
+                type={this.props.type || "button"}
+                className={`${Style.ltfButton} ${this.props.classNames}`}
+                onClick={this.handleClick}
+                disabled={this.props.disabled || false}
+            >
+                {this.props.buttonSpan && <span>{this.props.buttonSpan}</span>}
+                {this.props.buttonText}
+            </button>
+        )
+    }
+
     render() {
         return (
-            <div>
-                {this.props.type === 'submit' ?
-                    <input
-                        type={this.props.type}
-                        value={this.props.buttonText}
-                        className={`${Style.btn} ${this.props.classNames}`}
-                        disabled={this.props.disabled || false}
-                    />
-                    :
-                    <button
-                        type={this.props.type || "button"}
-                        className={`${Style.ltfButton} ${this.props.classNames}`}
-                        onClick={this.handleClick}
-                        disabled={this.props.disabled || false}
-                    >
-                        {this.props.buttonSpan && <span>{this.props.buttonSpan}</span>}
-                        {this.props.buttonText}
-                    </button>
-                }
-            </div>
+                this.props.type === 'submit' ? this.generateSubmit() : this.generateButton()
         )
     }
 }

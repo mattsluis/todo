@@ -5,6 +5,8 @@ import Button from '../core/button/button';
 
 import Api from 'middleware/api';
 
+import Style from 'assets/stylesheets/todoList/newTodo.scss';
+
 export default class newTodo extends React.Component {
     constructor(props) {
         super(props);
@@ -59,7 +61,7 @@ export default class newTodo extends React.Component {
 
         return (
             <li>
-                <div className="inputGroup">
+                <div className={Style.inputGroup}>
                     <Input {...inputProps.title}/>
                     <Input {...inputProps.description}/>
                     <Button {...addBtnProps}/>
