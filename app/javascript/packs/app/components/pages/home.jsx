@@ -5,7 +5,7 @@ import List from '../todoList/list';
 
 import Api from 'middleware/api';
 
-import Style from '/assets/stylesheets/pages/home/home.scss';
+import Style from './style.scss';
 
 export default class Home extends React.Component {
     constructor(props) {
