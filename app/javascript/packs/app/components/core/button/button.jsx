@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import Style from 'assets/stylesheets/core_components/button.scss';
+import Style from './style.scss';
 
 export default class Button extends Component {
     constructor(props) {

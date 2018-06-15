@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import NewTodo from '../todoList/new_todo';
-import List from '../todoList/list';
+import NewTodo from 'components/todoList/new_todo/new_todo';
+import List from 'components/todoList/list/list';
 
 import Api from 'middleware/api';
 

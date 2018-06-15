@@ -1,0 +1,11 @@
+//\\//\\**//\\//\\**//\\//\\** PAGES **//\\//\\**//\\//\\**//\\//\\
+@import "./components/pages/home/style.scss";
+
+//\\//\\**//\\//\\**//\\//\\** PAGE COMPONENTS **//\\//\\**//\\//\\**//\\//\\
+@import "./components/todoList/todo/style.scss";
+@import "./components/todoList/new_todo/style.scss";
+@import "./components/todoList/list/style.scss";
+
+//\\//\\**//\\//\\**//\\//\\** CORE COMPONENTS **//\\//\\**//\\//\\**//\\//\\
+@import "./components/core/input/style.scss";
+@import "./components/core/button/style.scss";

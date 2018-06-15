@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+import Style from './style.scss';
+
 export default class Input extends Component {
     constructor(props) {
         super(props);

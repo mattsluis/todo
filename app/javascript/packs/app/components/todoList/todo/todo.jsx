@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import Input from '../core/input/input';
-import Button from '../core/button/button';
+import Input from 'components/core/input/input';
+import Button from 'components/core/button/button';
 
-import Style from 'assets/stylesheets/todoList/todo.scss';
+import Style from './style.scss';
 
 export default class Item extends React.Component {
     constructor(props) {
@@ -106,7 +106,7 @@ export default class Item extends React.Component {
                 onClick: this.props.handleDelete,
             },
         }
-        
+
         return (
             <div className={`${Style.todoGroup}`}>
                 {todo.editable ? <Input {...inputProps.title} /> : <h4>{this.props.todo.title}</h4>}

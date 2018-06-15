@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 
-import Todo from '../todoList/todo';
-import Button from '../core/button/button';
+import Todo from 'components/todoList/todo/todo';
+
+import Button from 'components/core/button/button';
 
 import Api from 'middleware/api';
 
-import Style from 'assets/stylesheets/todoList/list.scss';
+import Style from './style.scss';
 
 export default class List extends React.Component {
     constructor(props) {

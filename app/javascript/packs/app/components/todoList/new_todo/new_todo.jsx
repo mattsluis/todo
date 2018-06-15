@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-import Input from '../core/input/input';
-import Button from '../core/button/button';
+import Input from 'components/core/input/input';
+import Button from 'components/core/button/button';
 
 import Api from 'middleware/api';
 
-import Style from 'assets/stylesheets/todoList/newTodo.scss';
+import Style from './style.scss';
 
 export default class newTodo extends React.Component {
     constructor(props) {
