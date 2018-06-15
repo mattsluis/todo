@@ -54,17 +54,21 @@ export default class newTodo extends React.Component {
         };
 
         const addBtnProps = {
-            classNames: "add",
-            buttonText: "add",
+            classNames: "btnSubmit",
+            buttonText: "Add",
             onClick: this.onSubmit,
         }
 
         return (
             <li>
                 <div className={Style.inputGroup}>
-                    <Input {...inputProps.title}/>
-                    <Input {...inputProps.description}/>
-                    <Button {...addBtnProps}/>
+                    <div className={Style.inputCol}>
+                        <Input {...inputProps.title}/>
+                        <Input {...inputProps.description}/>
+                    </div>
+                    <div className={Style.btnCol}>
+                        <Button {...addBtnProps}/>
+                    </div>
                 </div>
             </li>
         )

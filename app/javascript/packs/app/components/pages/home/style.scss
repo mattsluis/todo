@@ -1,38 +1,46 @@
-$bg: rgb(252, 241, 142);
-$vert: rgb(185, 63, 39);
+$bg-pad: rgb(252, 241, 142);
+$vert-break: rgb(185, 63, 39);
 $bg-header: rgb(43, 43, 43);
-$break: rgb(198, 227, 152);
+$horizontal-break: rgb(198, 227, 152);
+$bg-home: rgb(115, 124,135);
 
 .home {
-    background-color: $bg;
-    height: 100%;
-    width: 100%;
-    position:absolute;
 
     .notepadHeader {
         background-color: $bg-header;
         width: 100%;
+        max-width: 1000px;
         height: 75px;
     }
 
-    .vert {
-        position: absolute;
-        width: 5px;
-        left:10%;
-        top:0;
-        bottom:0;
-        border-left: 1px solid $vert;
-        border-right: 1px solid $vert;
-    }
-
-    .todoList {
-        list-style: none;
-        background: linear-gradient($break, transparent 3px);
-        background-size: 1px 30px;
+    .pad {
+        background-color: $bg-pad;
+        height: 100%;
         width: 100%;
-    }
-}
+        max-width: 1000px;
+        position: absolute;
 
-.break {
-    background-color: $break;
+        .vertBreak {
+            position: absolute;
+            width: 5px;
+            left:8%;
+            top:0;
+            bottom:0;
+            border-left: 1px solid $vert-break;
+            border-right: 1px solid $vert-break;
+        }
+
+        .paperPad {
+            background: linear-gradient($horizontal-break, transparent 3px);
+            background-size: 1px 30px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .todoList {
+                list-style: none;
+                padding-left: 0;
+            }
+        }
+    }
 }

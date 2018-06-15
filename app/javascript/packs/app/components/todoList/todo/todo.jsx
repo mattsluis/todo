@@ -86,34 +86,38 @@ export default class Item extends React.Component {
 
         const btnProps = {
             update: {
-                classNames: "Update",
+                classNames: "btnSubmit",
                 buttonText: "Update",
                 onClick: this.handleEdit,
             },
             cancel: {
-                classNames: "Cancel",
+                classNames: "btnCancel",
                 buttonText: "Cancel",
                 onClick: this.handleCancel,
             },
             submit: {
-                classNames: "Submit",
+                classNames: "btnSubmit",
                 buttonText: "Submit",
                 onClick: this.handleSubmit,
             },
             delete: {
-                classNames: "Delete",
+                classNames: "btnDelete",
                 buttonText: "Delete",
                 onClick: this.props.handleDelete,
             },
         }
 
         return (
-            <div className={`${Style.todoGroup}`}>
-                {todo.editable ? <Input {...inputProps.title} /> : <h4>{this.props.todo.title}</h4>}
-                {todo.editable ? <Input {...inputProps.description} /> : <p>{this.props.todo.description}</p>}
-                {todo.editable ? <Button {...btnProps.cancel}/> : ''}
-                {todo.editable ? <Button {...btnProps.submit}/> : <Button {...btnProps.update}/>}
-                <Button {...btnProps.delete} />
+            <div className={Style.todoGroup}>
+                <div className={Style.leftCol}>
+                    {todo.editable ? <Input {...inputProps.title} /> : <span>{this.props.todo.title}</span>}
+                    {todo.editable ? <Input {...inputProps.description} /> : <span>{this.props.todo.description}</span>}
+                </div>
+                <div className={Style.rightCol}>
+                    {todo.editable ? <Button {...btnProps.cancel}/> : ''}
+                    {todo.editable ? <Button {...btnProps.submit}/> : <Button {...btnProps.update}/>}
+                    <Button {...btnProps.delete} />
+                </div>
             </div>
         )
     }

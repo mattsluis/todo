@@ -28,7 +28,7 @@ export default class List extends React.Component {
 
         const list = todos.map((todo) => {
             return (
-                <li key={todo.id}>
+                <li key={todo.id} className={Style.listEl} >
                     <Todo
                         todo={todo}
                         handleDelete={(event) => this.onDelete(todo.id)}

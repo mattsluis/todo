@@ -1,18 +1,43 @@
+$btnSubmit: rgb(34,116,165);
+$btnSubmitHover: rgb(25,86,122);
+$btnDel: rgb(209,60,18);
+$btnDelHover: rgb(173,49,15);
+$btnCancel: rgb(255,210,33);
+$btnCancelHover: rgb(204,168,26);
+
+
+
 .btn {
-    // padding:;
+    padding: 5px 15px;
+    font-weight: 600;
+    border-radius: 5px;
 }
 
-.editButton {
+.btnSubmit {
+    background-color: $btnSubmit;
+
+    &:hover {
+        background-color: $btnSubmitHover;
+    }
+}
+
+.btnDelete {
+    background-color: $btnDel;
+
+    &:hover {
+        background-color: $btnDelHover;
+    }
 
 }
 
-.cancelButton {
-
-}
-.submitButton {
+.btnEdit {
 
 }
 
-.deleteButton {
+.btnCancel {
+    background-color: $btnCancel;
 
+    &:hover {
+        background-color: $btnCancelHover;
+    }
 }

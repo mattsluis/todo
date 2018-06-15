@@ -27,7 +27,7 @@ export default class Button extends Component {
         return (
             <button
                 type={this.props.type || "button"}
-                className={`${Style.ltfButton} ${this.props.classNames}`}
+                className={`${Style.btn} ${this.props.classNames}`}
                 onClick={this.handleClick}
                 disabled={this.props.disabled || false}
             >

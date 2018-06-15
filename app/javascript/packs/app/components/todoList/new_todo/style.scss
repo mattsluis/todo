@@ -5,8 +5,13 @@ li {
 
     .inputGroup {
         display: flex;
-    }
-    .todoGroup {
-        display: flex;
+
+        .inputCol {
+            flex: 50%;
+        }
+
+        .btnCol {
+            flex: 50%;
+        }
     }
 }

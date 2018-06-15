@@ -1,3 +1,14 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+
+    #app {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
 //\\//\\**//\\//\\**//\\//\\** PAGES **//\\//\\**//\\//\\**//\\//\\
 @import "./components/pages/home/style.scss";
 

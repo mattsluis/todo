@@ -1,0 +1,31 @@
+//A list of SASS variables being used in this project, not plugged in yet.
+//homepage
+$bg: rgb(252, 241, 142);
+$break: rgb(198, 227, 152);
+$vert: rgb(185, 63, 39);
+$bg-header: rgb(43, 43, 43);
+
+//btns
+$btnSubmit: rgb(34,116,165);
+$btnSubmitHover: rgb(25,86,122);
+
+$btnDel: rgb(209,60,18);
+$btnDelHover: rgb(173,49,15);
+
+$btnCancel: rgb(255,210,33);
+$btnCancelHover: rgb(204,168,26);
+
+//media queries
+$screen-sm: 576px;
+$screen-md: 768px;
+
+@mixin sm {
+   @media (min-width: #{$screen-sm}) {
+       @content;
+   }
+}
+@mixin md {
+   @media (min-width: #{$screen-md}) {
+       @content;
+   }
+}

@@ -1,3 +1,11 @@
 .todoGroup {
+    display: flex;
+    
+    .leftCol{
+        flex: 75%;
+    }
 
+    .rightCol {
+        flex: 25%;
+    }
 }

@@ -67,13 +67,15 @@ export default class Home extends React.Component {
         return (
             <div className={Style.home}>
                 <div className={Style.notepadHeader}></div>
-                <div className={Style.vert}></div>
-                <ul className={Style.todoList}>
-                    <NewTodo handleSubmit={this.onSubmit} />
-                    <NewTodo handleSubmit={this.onSubmit} />
-                    <NewTodo handleSubmit={this.onSubmit} />
-                    <List {...listProps} />
-                </ul>
+                <div className={Style.pad}>
+                    <div className={Style.vertBreak}></div>
+                    <div className={Style.paperPad}>
+                        <ul className={Style.todoList}>
+                            <NewTodo handleSubmit={this.onSubmit} />
+                            <List {...listProps} />
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
